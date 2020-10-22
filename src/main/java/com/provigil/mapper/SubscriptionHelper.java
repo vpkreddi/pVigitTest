@@ -33,8 +33,7 @@ public class SubscriptionHelper implements Function<Subscription, com.provigil.m
 						cost=input.getArea()*2;
 					}
 			}
-			result.setId(input.getId());
-			result.setCost(cost);
+			
 		} else if (input.getArea() <= 5000) {
 			if (input.getLocation().equals(Location.Indoor)) {
 				if(input.getPlan().equals(Plan.MONTHLY)) {
@@ -52,32 +51,34 @@ public class SubscriptionHelper implements Function<Subscription, com.provigil.m
 		} else if (input.getArea() <= 50000) {
 			if (input.getLocation().equals(Location.Indoor)) {
 				if(input.getPlan().equals(Plan.MONTHLY)) {
-				cost = input.getArea()*2;
+					cost = 2500*2+2500*1.5+(input.getArea()-5000)*1;
 				}else if(input.getPlan().equals(Plan.YEARLY)){
-					cost=input.getArea()*1.5;
+					cost = 2500*1.5+2500*1+(input.getArea()-5000)*0.6;
 				}
 			} else if (input.getLocation().equals(Location.Outdoor)) {
 				if(input.getPlan().equals(Plan.MONTHLY)) {
-					cost = input.getArea()*2.5;
+					cost = 2500*2.5+(2500*1.5)+(input.getArea()-5000)*1.2;
 					}else if(input.getPlan().equals(Plan.YEARLY)){
-						cost=input.getArea()*2;
+						cost=2500*2+(2500*1)+(input.getArea()-5000)*0.8;
 					}
 			}
 		} else {
 			if (input.getLocation().equals(Location.Indoor)) {
 				if(input.getPlan().equals(Plan.MONTHLY)) {
-				cost = input.getArea()*2;
+					cost = 2500*2+2500*1.5+(45000*1)+(input.getArea()-50000)*0.8;
 				}else if(input.getPlan().equals(Plan.YEARLY)){
-					cost=input.getArea()*1.5;
+					cost = 2500*1.5+2500*1+(45000*0.6)+(input.getArea()-50000)*0.5;
 				}
 			} else if (input.getLocation().equals(Location.Outdoor)) {
 				if(input.getPlan().equals(Plan.MONTHLY)) {
-					cost = input.getArea()*2.5;
+					cost = 2500*2.5+(2500*1.5)+(45000*1.2)+(input.getArea()-50000)*0.8;
 					}else if(input.getPlan().equals(Plan.YEARLY)){
-						cost=input.getArea()*2;
+						cost=2500*2+(2500*1)+(45000*0.8)+(input.getArea()-50000)*0.5;
 					}
 			}
 		}
+		result.setId(input.getId());
+		result.setCost(cost);
 		return result;
 	}
 

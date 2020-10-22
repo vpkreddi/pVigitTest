@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "ad13ae55-e2bc-4a6e-ae51-5927c66344e1",
+		"name": "pvigiltest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/calculate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<subscriptions>\n   <subscription>\n      <id>1</id>\n      <area>2500</area>\n      <plan>MONTHLY</plan>\n      <location>Indoor</location>\n   </subscription>\n   <subscription>\n      <id>2</id>\n      <area>2500</area>\n      <plan>YEARLY</plan>\n      <location>Indoor</location>\n   </subscription>\n    <subscription>\n      <id>3</id>\n      <area>4000</area>\n      <plan>MONTHLY</plan>\n      <location>Outdoor</location>\n   </subscription>\n    <subscription>\n      <id>4</id>\n      <area>4000</area>\n      <plan>YEARLY</plan>\n      <location>Outdoor</location>\n   </subscription>\n    <subscription>\n      <id>5</id>\n      <area>25000</area>\n      <plan>MONTHLY</plan>\n      <location>Indoor</location>\n   </subscription>\n     <subscription>\n      <id>6</id>\n      <area>25000</area>\n      <plan>YEARLY</plan>\n      <location>Indoor</location>\n   </subscription>\n</subscriptions>\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
