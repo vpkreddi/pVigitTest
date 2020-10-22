@@ -2,10 +2,16 @@ package com.provigil.mapper;
 
 import java.util.function.Function;
 
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
+
 import com.provigil.model.Location;
 import com.provigil.model.Plan;
 import com.provigil.model.Subscription;
 
+@Component
 public class SubscriptionHelper implements Function<Subscription, com.provigil.model.result.Subscription> {
 
 	@Override

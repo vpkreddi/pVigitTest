@@ -1,0 +1,9 @@
+com/provigil/CalculatorApp.class
+com/provigil/model/Location.class
+com/provigil/model/result/Result.class
+com/provigil/service/CalculatorService.class
+com/provigil/mapper/SubscriptionHelper.class
+com/provigil/model/Plan.class
+com/provigil/controller/CalculatorController.class
+com/provigil/model/Subscription.class
+com/provigil/model/result/Subscription.class

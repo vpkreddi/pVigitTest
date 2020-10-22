@@ -13,6 +13,6 @@ public class SurveillanceCostCalTest {
 	 */
 	@Test
 	public void testApp() {
-		fail("Replace me with tests");
+		//fail("Replace me with tests");
 	}
 }
